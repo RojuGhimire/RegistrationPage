@@ -1,3 +1,4 @@
+
 import React,{useState} from 'react'
 
 import './App.css'
@@ -17,10 +18,10 @@ function App() {
       </div>
       <div className="m-4">
         <label htmlFor="userame">Password</label>
-        <input value ={password} id='password' type='text' />
+        <input className='border border-black round-md' value ={password} id='password' type='text' />
       </div>
       <div className="flex justify center">
-        <button className="bg-red-500 text-white px-2 py-1 rounded-md">
+        <button className="bg-red-500 text-white px-2 py-1 rounded-md" type='submit'>
           Login
         </button>
       </div>
