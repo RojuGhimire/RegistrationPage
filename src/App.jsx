@@ -1,15 +1,19 @@
 // App.jsx
 import React from 'react';
-import LoginPage from './component/Login';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SignUp from './component/SignUp.jsx';
+import Login from './component/Login';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    
-      <LoginPage />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
+        {/* Add other routes as needed */}
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

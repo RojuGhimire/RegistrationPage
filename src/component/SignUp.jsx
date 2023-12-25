@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-const LoginPage = () => {
+const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -22,8 +21,6 @@ const LoginPage = () => {
       return;
     }
 
-  
-
     setEmail('');
     setPassword('');
   };
@@ -31,9 +28,9 @@ const LoginPage = () => {
   return (
     <div className="flex flex-col justify-center mt-40 items-center">
       <form onSubmit={handleSubmit}>
-        <h1 className="text-3xl">Login</h1>
+        <h1 className="text-3xl">Sign Up</h1>
         <div className="m-4">
-          <label htmlFor="username">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             value={email}
             onChange={handleEmailChange}
@@ -53,20 +50,12 @@ const LoginPage = () => {
         </div>
         <div className="flex justify-center">
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-            Login
+            Sign Up
           </button>
         </div>
       </form>
-      <div className="mt-4">
-        <p>
-          Don't have an account?{' '}
-          <Link to="/signup" className="text-blue-500">
-            Sign up
-          </Link>
-        </p>
-      </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default SignUp;
